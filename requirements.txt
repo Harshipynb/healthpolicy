@@ -17,5 +17,4 @@ threadpoolctl
 urllib3
 Werkzeug
 wincertstore
-pickle
 gunicorn
