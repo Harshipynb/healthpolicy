@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+<body>
+
+        <div style="color:blue">
+            <form action="{{ url_for('predict')}}" method="post">   
+            <h1>Health Insurance Customer Interest</h1>
+            <h2>Customer Gender </h2><select name="Gender" id="Gender" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+        
+            </select>
+            <h3>Age of the Customer</h3><input id="Age" name="Age" type="number" required="requires">
+            <h4>Driving License Avaialable </h4><select name="Driving" id="Driving" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+
+            </select>
+            <h5>Previously Insured or not</h5><select name="previos_insure" id="previos_insure" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <br>
+            <h6>Vehicle is Damaged or not </h6><select name="Vehicle_damage" id="Vehicle_damage" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <br>
+            <h7>Annual Premium you pay </h7><input name="Annual_prem" id="Annual_prem" required="required" type="number">
+            <br>
+            <h8>Vintage of the Customer (In Days) </h8><input name="Vintage_cust" id="Vintage_cust" required="required" type="number">
+            <br>
+            <h9>Vehicle Age </h9><select name="Vehilce_age" id="Vehicle_age" required="required">
+                <option value="1 To 2 Years">1 To 2 Years</option>
+                <option value="Less than One Year">Less than One Year</option>
+                <option value="Greater than 2 Years">Greater than 2 Years</option>
+            </select>
+            <br>
+            <br>
+            <button id="Submit" type="Submit">check Interested or Not</button>
+        </form>
+    
+        <br><br><h3>{{ prediction_text }}</h3>
+
+    </div>
+                  
+</body>       
+</html>
