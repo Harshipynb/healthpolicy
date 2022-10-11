@@ -17,6 +17,5 @@ threadpoolctl
 urllib3
 Werkzeug
 wincertstore
-python==3.10.5
 pickle
 gunicorn
